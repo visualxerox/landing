@@ -53,10 +53,10 @@ header {
 }
 
 img {
-  display: block;
+  display: inline-block;
   height: 200px;
   object-fit: cover;
-  width: auto;
+  /* width: auto; */
   animation: arriba 1s ease-in;
 }
 
@@ -160,5 +160,42 @@ clip-path: circle(0% at 0 0);
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+@media screen and (max-width:768px){
+  .container {
+    width: 100%;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+  }
+  /* .textos h1 {
+    width: 330px;
+    font-size: 30px;
+  } */
+  .textos {
+    width: 70%;
+  }
+
+  .textos h2 {
+    padding: 10px 0;
+  }
+
+}
+
+@media screen and (max-width:375px){
+  .container {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .textos {
+    width: 100%;
+  }
+  .textos h1 {
+    font-size: 25px;
+  }
+  img {
+    height: 100px;
   }
 }
